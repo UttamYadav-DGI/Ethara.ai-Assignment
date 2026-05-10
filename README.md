@@ -128,18 +128,15 @@ team-task-manager/
 
 ## ✨ Features
 
-- **Authentication** — JWT signup, login, and current-user session flow
-- **Role-Based Access** — Server-side role checks for project admins, members, and task assignees
-- **Project Management** — Create, read, update, and delete projects
-- **Team Collaboration** — Add and remove project members
-- **Task Management** — Create, read, update, and delete tasks
-- **Task Filtering** — Filter by status, priority, and assignee
-- **Dashboard Analytics** — Real-time stats and status charts from live API data
-- **Overdue Detection** — Automatic detection for tasks with past due dates
-- **Kanban Board** — Visual task management with drag-and-drop workflow
-- **Task Details Panel** — Comprehensive side panel for task information
-- **User Experience** — Empty states, skeleton loading states, and fully responsive layout
-- **Design** — Dark-first glassmorphism UI with smooth Framer Motion animations
+- **Secure Authentication** — JWT-powered signup, login, and session management  
+- **Role-Based Authorization** — Backend access control for admins, members, and assignees  
+- **Project Management** — Create, update, view, and delete projects efficiently  
+- **Team Collaboration** — Manage project members with add/remove functionality  
+- **Task Management** — Full CRUD operations for handling tasks  
+- **Smart Task Filtering** — Filter tasks based on status, priority, and assignee  
+- **Analytics Dashboard** — Real-time insights and status visualization using live API data  
+- **Overdue Task Tracking** — Automatically highlights tasks that exceed due dates  
+- **Detailed Task Panel** — Dedicated side panel with complete task information  
 
 ---
 
@@ -211,15 +208,14 @@ npx serve dist -l 5173
 ```env
 DATABASE_URL="postgresql://..."
 JWT_SECRET="change-this-secret"
-PORT=4000
-NODE_ENV=development
+PORT=8000
 FRONTEND_URL="http://localhost:5173"
 ```
 
 ### Frontend (`frontend/.env`)
 
 ```env
-VITE_API_URL=http://localhost:4000
+VITE_API_URL=http://localhost:8000
 ```
 
 ---
