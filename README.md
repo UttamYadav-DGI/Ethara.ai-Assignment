@@ -8,7 +8,7 @@ A full-stack **Team Task Manager** built with a modern, production-grade stack �
 
 | Component | Link |
 |-----------|------|
-| 🌐 Frontend (Vercel) | [ethara-ai-assignment-ten.vercel.app](http://localhost:5173) |
+| 🌐 Frontend (Vercel) | [ethara-ai-assignment-kvg5.vercel.app](https://ethara-ai-assignment-kvg5.vercel.app/login) |
 | ⚙️ Backend API (Render) | [ethara-ai-assignment-i1nt.onrender.com](http://localhost:4000/) |
 
 ---
