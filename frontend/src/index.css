@@ -1,0 +1,42 @@
+:root {
+  --bg-base: #f6f8fb;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-elevated: #f1f5f9;
+  --bg-subtle: #eef3f8;
+  --border: #d8e0ea;
+  --border-hover: #b8c5d6;
+  --accent-primary: #2563eb;
+  --accent-secondary: #0f766e;
+  --accent-success: #059669;
+  --accent-warning: #d97706;
+  --accent-danger: #dc2626;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #718096;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    linear-gradient(180deg, rgba(37, 99, 235, .08), transparent 330px),
+    var(--bg-base);
+  color: var(--text-primary);
+  font-family: Inter, system-ui, sans-serif;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.glass { @apply border border-[color:var(--border)] bg-[color:var(--bg-card)] shadow-glass; }
+.surface { @apply border border-[color:var(--border)] bg-[color:var(--bg-surface)] shadow-card; }
+.btn { @apply inline-flex min-h-10 items-center justify-center gap-2 rounded-md bg-[color:var(--accent-primary)] px-4 py-2 text-sm font-semibold text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-md active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60; }
+.btn-secondary { @apply inline-flex min-h-10 items-center justify-center gap-2 rounded-md border border-[color:var(--border)] bg-white px-4 py-2 text-sm font-semibold text-[color:var(--text-primary)] transition duration-200 hover:-translate-y-0.5 hover:border-[color:var(--border-hover)] hover:bg-[color:var(--bg-elevated)] active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60; }
+.btn-danger { @apply inline-flex min-h-10 items-center justify-center gap-2 rounded-md bg-red-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-red-700 hover:shadow-md active:translate-y-0 disabled:cursor-not-allowed disabled:opacity-60; }
+.icon-btn { @apply inline-grid h-10 w-10 place-items-center rounded-md border border-[color:var(--border)] bg-white text-[color:var(--text-secondary)] transition duration-200 hover:border-[color:var(--border-hover)] hover:bg-[color:var(--bg-elevated)] hover:text-[color:var(--text-primary)]; }
+.input { @apply w-full rounded-md border border-[color:var(--border)] bg-white px-3 py-2.5 text-sm text-[color:var(--text-primary)] outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100; }
+.skeleton { @apply relative overflow-hidden rounded-md bg-slate-200; }
+.skeleton::after { content: ""; @apply absolute top-0 h-full w-1/2 animate-shimmer bg-gradient-to-r from-transparent via-white/70 to-transparent; }
+.chip { @apply inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-2.5 py-1 text-xs font-semibold; }
